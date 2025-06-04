@@ -1,0 +1,268 @@
+/* ------------------ BODY AND BACKGROUND ------------------ */
+body {
+  background-image: url('/static/images/medical-background.jpg'); /* Background image */
+  background-size: cover; /* Ensure the background covers the entire screen */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Avoid repeating the background */
+  background-attachment: fixed; /* Make the background fixed during scroll */
+  font-family: 'Poppins', sans-serif; /* Poppins font for a clean look */
+  color: white; /* Set default text color to white */
+  animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in effect on page load */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Dark overlay to improve text readability over background */
+body::before {
+  content: ''; /* Empty content for the overlay */
+  position: absolute; /* Position it over the body */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(20, 30, 48, 0.9), rgba(36, 59, 85, 0.85)); /* Gradient dark overlay */
+  z-index: -1; /* Position the overlay behind all other content */
+}
+
+/* ------------------ NAVBAR STYLES ------------------ */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black navbar */
+  backdrop-filter: blur(5px); /* Blur the background behind the navbar */
+}
+
+.navbar-brand {
+  color: white; /* Navbar brand text in white */
+  font-weight: 600; /* Make brand name bold */
+}
+
+.nav-link {
+  color: white !important; /* Navbar links in white */
+  font-weight: 500; /* Slightly less bold links */
+}
+
+/* ------------------ PAGE TITLES ------------------ */
+.container-title {
+  text-align: center; /* Center-align the title */
+  padding: 20px 0; /* Add vertical padding */
+}
+
+/* ------------------ AI CONTAINER ------------------ */
+.ai-container {
+  background: none; /* Remove any background */
+  border: none; /* Remove any borders */
+  border-radius: 0; /* Remove border radius */
+  box-shadow: none; /* Remove any shadows */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+}
+
+/* ------------------ FORM ELEMENTS ------------------ */
+.form-group {
+  margin-bottom: 20px; /* Add space below form groups */
+  text-align: center; /* Center-align form labels and inputs */
+}
+
+.form-label {
+  font-size: 1.2rem; /* Larger font for form labels */
+  font-weight: 600; /* Make labels bold */
+  margin-bottom: 15px; /* Add space below labels */
+  color: white; /* White color for labels */
+}
+
+/* Form input styling */
+.input-group {
+  max-width: 600px; /* Limit input width */
+  margin: 0 auto; /* Center the input */
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+  color: white; /* White text */
+  padding: 12px; /* Padding inside input */
+  height: auto; /* Let height adjust automatically */
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.2); /* Lighten the background on focus */
+  color: white; /* Keep text white */
+  border-color: #00e0ff; /* Blue border on focus */
+  box-shadow: 0 0 10px rgba(0, 224, 255, 0.5); /* Blue glow on focus */
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Lighter color for placeholder text */
+}
+
+/* ------------------ BUTTON STYLES ------------------ */
+.btn-info {
+  background-color: #00e0ff; /* Light blue button */
+  border: none; /* Remove border */
+  color: #061428; /* Dark text for contrast */
+  font-weight: 600; /* Bold text */
+}
+
+.btn-info:hover {
+  background-color: #33e5ff; /* Lighter blue on hover */
+  box-shadow: 0 0 15px rgba(0, 224, 255, 0.7); /* Blue glow effect on hover */
+}
+
+/* Primary button styling */
+.btn-primary {
+  background-color: #0d6efd; /* Blue background */
+  border: none; /* Remove border */
+  padding: 10px 25px; /* Add padding */
+  font-weight: 600; /* Bold text */
+  margin: 20px 5px; /* Add margin around button */
+  box-shadow: 0 0 15px rgba(13, 110, 253, 0.5); /* Light blue shadow */
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7; /* Darker blue on hover */
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.7); /* Stronger shadow on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Outline secondary button */
+.btn-outline-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+  color: white; /* White text */
+  padding: 10px 25px; /* Padding around button */
+  font-weight: 500; /* Slightly lighter text */
+  margin: 20px 5px; /* Margin around button */
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+  color: white; /* Keep text white */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* White glow effect */
+}
+
+/* ------------------ TEXT AND FOOTER STYLES ------------------ */
+.text-center .text-muted {
+  color: white !important; /* White text for muted text */
+  margin-top: 10px; /* Space above the text */
+}
+
+.card-title {
+  color: white; /* Card titles in white */
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+  margin-bottom: 30px; /* Margin below the card */
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(242, 235, 235, 0.997); /* Light border below header */
+  font-weight: 600; /* Bold font for card header */
+}
+
+/* ------------------ AI PROGRESS BAR ------------------ */
+.ai-progress-bar {
+  height: 4px; /* Thin progress bar */
+  width: 0%; /* Start with no progress */
+  background: linear-gradient(to right, #00e0ff, #00ff9d); /* Gradient color */
+  transition: width 3s cubic-bezier(0.19, 1, 0.22, 1); /* Smooth transition */
+  border-radius: 2px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below the progress bar */
+  box-shadow: 0 0 10px rgba(0, 224, 255, 0.6); /* Blue glow around the progress bar */
+}
+
+/* ------------------ CONFIDENCE METER ------------------ */
+.confidence-meter {
+  height: 10px; /* Height of the confidence bar */
+  background: rgba(255, 255, 255, 0.2); /* Light background */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 10px; /* Space above the meter */
+  overflow: hidden; /* Hide overflow */
+}
+
+.confidence-level {
+  height: 100%; /* Full height */
+  background: linear-gradient(to right, #00e0ff, #00ff9d); /* Gradient color for confidence */
+  border-radius: 5px; /* Rounded corners */
+  transition: width 1s ease-in-out; /* Smooth width transition */
+}
+
+/* ------------------ SUCCESS ALERT ------------------ */
+.alert-success {
+  background-color: rgba(25, 135, 84, 0.7); /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+}
+
+/* ------------------ RESULTS TABLE ------------------ */
+.results-table {
+  background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+  color: white; /* White text */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+}
+
+.results-table th {
+  background-color: rgba(0, 224, 255, 0.2); /* Light blue for table headers */
+  border-color: rgba(255, 255, 255, 0.1); /* Light border for table headers */
+}
+
+.results-table td {
+  border-color: rgba(255, 255, 255, 0.1); /* Light border for table data cells */
+}
+
+.badge {
+  font-size: 0.8rem; /* Smaller font for badges */
+  padding: 5px 10px; /* Padding inside badges */
+}
+
+/* ------------------ FOOTER STYLES ------------------ */
+.footer {
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black footer background */
+  color: #bbbbbb; /* Light grey footer text */
+  padding: 15px; /* Padding around footer content */
+  text-align: center; /* Center-align the footer text */
+  position: fixed; /* Fixed position at the bottom */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width */
+  backdrop-filter: blur(5px); /* Blur the background behind the footer */
+  z-index: 100; /* Ensure footer is above other content */
+}
+
+/* ------------------ ANIMATIONS ------------------ */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start from below */
+  }
+  to {
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* End in natural position */
+  }
+}
+
+/* Button hover animations */
+button.btn {
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+button.btn:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* ------------------ LIST STYLES ------------------ */
+ul, ol {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding */
+}
+
+ul li, ol li {
+  padding-left: 0; /* Remove padding */
+  margin-bottom: 10px; /* Space between list items */
+  font-size: 16px; /* Set font size */
+}
+
+/* Button styling to indicate pointer cursor */
+.btn-info {
+  cursor: pointer; /* Show pointer cursor on hover */
+}
