@@ -1,0 +1,78 @@
+@startuml Disease Prediction System ER Diagram
+
+!define table(x) class x << (T,#FFAAAA) >>
+!define primary_key(x) <u>x</u>
+!define foreign_key(x) #x#
+
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+table(SymptomSeverity) {
+    primary_key(id): Integer
+    symptom: String
+    weight: Integer
+}
+
+table(DiseaseTraining) {
+    primary_key(id): Integer
+    disease: String
+    symptom1: String
+    symptom2: String
+    symptom3: String
+    symptom4: String
+    symptom5: String
+}
+
+table(DiseaseDescription) {
+    primary_key(id): Integer
+    disease: String
+    description: Text
+}
+
+table(DiseaseDiet) {
+    primary_key(id): Integer
+    disease: String
+    diet1: String
+    diet2: String
+    diet3: String
+    diet4: String
+}
+
+table(DiseaseMedicine) {
+    primary_key(id): Integer
+    disease: String
+    medicine1: String
+    medicine2: String
+    medicine3: String
+    medicine4: String
+}
+
+table(DiseasePrecaution) {
+    primary_key(id): Integer
+    disease: String
+    precaution1: String
+    precaution2: String
+    precaution3: String
+    precaution4: String
+}
+
+table(DiseaseWorkout) {
+    primary_key(id): Integer
+    disease: String
+    workout1: String
+    workout2: String
+    workout3: String
+    workout4: String
+}
+
+DiseaseTraining ||--o{ DiseaseDescription : "has"
+DiseaseTraining ||--o{ DiseaseDiet : "has"
+DiseaseTraining ||--o{ DiseaseMedicine : "has"
+DiseaseTraining ||--o{ DiseasePrecaution : "has"
+DiseaseTraining ||--o{ DiseaseWorkout : "has"
+SymptomSeverity ||--o{ DiseaseTraining : "used in"
+
+@enduml 
